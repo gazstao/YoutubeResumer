@@ -25,8 +25,6 @@ Ao longo deste tutorial, vamos explorar:
 
 Basicamente precisamos ter instalado no computador o [Ollama](https://ollama.com/) e o Python.
 
-
-
 ### 1.1 - Ollama
 
 - Para instalar o Ollama, vá até o site www.ollama.com, baixe o programa para sua plataforma e execute-o. 
