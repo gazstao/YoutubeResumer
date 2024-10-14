@@ -13,9 +13,13 @@ Ao longo deste tutorial, vamos explorar:
 3. **Gerar resumos inteligentes**: Criar um algoritmo que compila as ideias principais do vídeo em uma versão curta e objetiva.
 4. **Dicas e truques para melhorar a precisão** do resumo e customizar os resultados para atender às suas necessidades.
 
+-------------------------
+
 # 1. Instalando os programas
 
 Basicamente precisamos ter instalado no computador o [Ollama](https://ollama.com/) e o Python.
+
+
 
 ### 1.1 - Ollama
 
@@ -25,7 +29,10 @@ Basicamente precisamos ter instalado no computador o [Ollama](https://ollama.com
 
 caso tudo tenha dado certo, você já está o modelo instalado localmente. 
 
-![[imagens/Pasted image 20241014162130.png]]
+![Pasted image 20241014162130](https://github.com/user-attachments/assets/905a5842-10e2-4cf6-ba94-75657329f991)
+
+
+
 
 ### 1.2 - Python
 
@@ -38,7 +45,10 @@ Linux: utilize o comando de instalação para sua versão, por exemplo no Debian
 
 teste sua instalação digitando no shell (ou no prompt de comando) **python3**
 
-![[imagens/Pasted image 20241014163228.png]]
+![Pasted image 20241014163228](https://github.com/user-attachments/assets/80cfe662-f0a0-41e2-8c2f-932bbb67b7bf)
+
+
+
 
 ### 1.3 - Instalando as dependências necessárias
 
@@ -47,7 +57,11 @@ Utilize o comando abaixo para instalar as dependências necessárias desse proje
 	pip install  youtube_transcript_api ollama
 
 
-# 2. Obtendo a transcrição
+------------------------------------------
+
+# 2. Funcionalidades
+
+### 2.1 Obtendo a transcrição
 
 O programa **get_transcript.py** faz a transcrição de um vídeo. 
 
