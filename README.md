@@ -23,7 +23,7 @@ tudo isso de maneira automatizada e rodando suave.
 
 Os requisitos para que o programa funcione são:
 
-- Instalação do Python e das bibliotecas (uma para transcrição do vídeo e uma para a IA)
+- Instalação do Python e das bibliotecas (uma para transcrição do vídeo e uma para o ollama)
 - Instalação do Ollama
 
 
