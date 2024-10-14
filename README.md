@@ -25,7 +25,7 @@ Basicamente precisamos ter instalado no computador o [Ollama](https://ollama.com
 
 caso tudo tenha dado certo, você já está o modelo instalado localmente. 
 
-![[Pasted image 20241014162130.png]]
+![[imagens/Pasted image 20241014162130.png]]
 
 ### 1.2 - Python
 
@@ -38,7 +38,7 @@ Linux: utilize o comando de instalação para sua versão, por exemplo no Debian
 
 teste sua instalação digitando no shell (ou no prompt de comando) **python3**
 
-![[Pasted image 20241014163228.png]]
+![[imagens/Pasted image 20241014163228.png]]
 
 ### 1.3 - Instalando as dependências necessárias
 
