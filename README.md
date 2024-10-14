@@ -141,7 +141,7 @@ O programa [**get_transcript.py**](https://github.com/gazstao/YoutubeResumer/blo
 
 ## 2.2 Solicitando o resumo
 
-O programa [**resuma.py**](https://github.com/gazstao/YoutubeResumer/blob/main/resuma.py)faz a transcrição seguida de um resumo do vídeo.
+O programa [**resuma.py**](https://github.com/gazstao/YoutubeResumer/blob/main/resuma.py) faz a transcrição seguida de um resumo do vídeo.
 
 	python3 resuma.py
 
