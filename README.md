@@ -49,20 +49,23 @@ Utilize o comando abaixo para instalar as dependências necessárias desse proje
 
 # 2. Obtendo a transcrição
 
-Use o editor de sua preferência (vscode, notepad, vim... ) para criar o seguinte programa:
+O programa **get_transcript.py** faz a transcrição de um vídeo. 
 
-**get_transcript.py**
+	#biblioteca para lidar com a API da Youtube
+	from youtube_transcript_api import YouTubeTranscriptApi                
+	idioma = ['pt','en']
+	
+	# Obtem a URL do vídeo
+	video_url = input ("Qual a url do video que deseja transcrever?\n")     
+	
+	# Obtem o id a partir da URL
+	video_id = video_url.split("v=")[-1]                                    
+	
+	try:
+		transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=idioma)    
+		transcript_text = " ".join([entry['text'] for entry in transcript])            
+		print(transcript_text)
+	
+	except Exception as e:
+		print(f"Erro ao obter a transcrição na função get_transcript: {e}")
 
-from youtube_transcript_api import YouTubeTranscriptApi                # biblioteca para lidar com a API da Youtube
-idioma = ['pt','en']
-
-video_url = input ("Qual a url do video que deseja transcrever?\n")     # Obtem a URL do vídeo
-video_id = video_url.split("v=")[-1]                                    # Obtem o id a partir da URL
-
-try:
-	transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=idioma)    
-	transcript_text = " ".join([entry['text'] for entry in transcript])            
-	print(transcript_text)
-
-except Exception as e:
-	print(f"Erro ao obter a transcrição na função get_transcript: {e}")
