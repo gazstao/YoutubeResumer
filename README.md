@@ -151,9 +151,9 @@ O programa [**resuma.py**](https://github.com/gazstao/YoutubeResumer/blob/main/r
 
 A versão final [**youtubeResumer.py**](https://github.com/gazstao/YoutubeResumer/blob/main/youtubeResumer.py) possui algumas funcionalidades adicionais, que são gravar a transcrição em um arquivo de texto e criar um arquivo html com cada resumo. Para gravas esses arquivos, deve existir uma pasta chamada "data" em seu diretório.
 
-![image](https://github.com/user-attachments/assets/c840298a-a41c-435e-8283-d1dcd9d75e2a)
-
-
 -  Irá obter a transcrição e gravá-la em um arquivo de texto na pasta ./data
 -  Irá criar um arquivo html para cada resposta com o resumo na pasta ./data
+
+![image](https://github.com/user-attachments/assets/c840298a-a41c-435e-8283-d1dcd9d75e2a)
+
 
