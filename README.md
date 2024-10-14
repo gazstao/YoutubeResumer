@@ -28,7 +28,6 @@ Os requisitos para que o programa funcione são:
 - Instalação do Python e das bibliotecas (uma para transcrição do vídeo e uma para a IA)
 - Instalação do Ollama
 
----------------------
 
 ### 1.1 - Instalando o ollama
 
@@ -131,7 +130,6 @@ Utilize o comando abaixo para instalar as dependências necessárias desse proje
 
 
 ------------------------------------------
-
 
 # 2. Funcionalidades
 
