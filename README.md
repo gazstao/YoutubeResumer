@@ -139,26 +139,22 @@ Utilize o comando abaixo para instalar as dependências necessárias desse proje
 
 O programa [**get_transcript.py**](https://github.com/gazstao/YoutubeResumer/blob/main/get_transcript.py) faz a transcrição de um vídeo. 
 
-
-	#biblioteca para lidar com a API da Youtube
-	from youtube_transcript_api import YouTubeTranscriptApi                
-	idioma = ['pt','en']
-	
-	# Obtem a URL do vídeo
-	video_url = input ("Qual a url do video que deseja transcrever?\n")     
-	
-	# Obtem o id a partir da URL
-	video_id = video_url.split("v=")[-1]                                    
-	
-	try:
-		transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=idioma)    
-		transcript_text = " ".join([entry['text'] for entry in transcript])            
-		print(transcript_text)
-	
-	except Exception as e:
-		print(f"Erro ao obter a transcrição na função get_transcript: {e}")
-
+	python3 get_transcript.py
 
 
 ### 2.2 Solicitando o resumo
+
+O programa [**resuma.py**](https://github.com/gazstao/YoutubeResumer/blob/main/resuma.py)faz a transcrição seguida de um resumo do vídeo.
+
+	python3 resuma.py
+
+
+-----------------------
+
+# 3. Versão Final
+
+A versão final [**youtubeResumer.py**](https://github.com/gazstao/YoutubeResumer/blob/main/youtubeResumer.py) possui algumas funcionalidades adicionais, que são gravar a transcrição em um arquivo de texto e criar um arquivo html com cada resumo. Para gravas esses arquivos, deve existir uma pasta chamada "data" em seu diretório.
+
+-  Irá obter a transcrição e gravá-la em um arquivo de texto na pasta ./data
+-  Irá criar um arquivo html para cada resposta com o resumo na pasta ./data
 

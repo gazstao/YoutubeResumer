@@ -89,7 +89,7 @@ def criaHtml(modelo, texto, video_id, url):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>YouTube Resumer </title>
+        <title>YouTube Resumer</title>
         <style>
             body {{
                 font-family: Arial, sans-serif;
@@ -113,7 +113,7 @@ def criaHtml(modelo, texto, video_id, url):
         </style>
     </head>
     <body>
-        <h1>GazsTao YouTube Resumer - {modelo}</h1>
+        <h1>YouTube Resumer - {modelo}</h1>
         <p><a href="{url}">{url}</a></p>
         <pre>{texto}</pre>
     </body>
