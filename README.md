@@ -42,10 +42,10 @@ caso tudo tenha dado certo, você já está o modelo instalado localmente.
 ![Pasted image 20241014162130](https://github.com/user-attachments/assets/905a5842-10e2-4cf6-ba94-75657329f991)
 
 
-Caso deseje obter um resumo por mais de um modelo, instale quais desejar.
+Caso deseje obter um resumo por mais de um modelo, instale os que desejar.
 Dependendo da capacidade de seu hardware, especialmente da placa de vídeo (GPU), poderá instalar modelos maiores. 
 
-Se sua máquina tiver que usar a CPU ao invés da GPU o tempo de processamento será maior, mas alguns modelos tem uma eficiência tão boa que permitem um tempo de resposta relativamente baixo. 
+Se sua máquina tiver que usar a CPU ao invés da GPU o tempo de processamento aumentará, mas alguns modelos tem uma eficiência tão boa que permitem um tempo de resposta muito bom mesmo em CPUs. 
 
 Para computadores comuns, o melhor custo-benefício na minha (modesta e imperfeita) opinião, está em:
 
