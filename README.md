@@ -25,7 +25,7 @@ Basicamente precisamos ter instalado no computador o [Ollama](https://ollama.com
 
 caso tudo tenha dado certo, você já está o modelo instalado localmente. 
 
-![Pasted image 20241014162130](https://github.com/user-attachments/assets/7c198df4-7023-4290-92ad-f54788aab031)
+![[imagens/Pasted image 20241014162130.png]]
 
 ### 1.2 - Python
 
@@ -37,8 +37,8 @@ Linux: utilize o comando de instalação para sua versão, por exemplo no Debian
 	sudo apt install python3.11-full python3-pip
 
 teste sua instalação digitando no shell (ou no prompt de comando) **python3**
-![Pasted image 20241014163228](https://github.com/user-attachments/assets/6ff0b512-c920-4242-b663-4db48e431003)
 
+![[imagens/Pasted image 20241014163228.png]]
 
 ### 1.3 - Instalando as dependências necessárias
 
@@ -49,20 +49,23 @@ Utilize o comando abaixo para instalar as dependências necessárias desse proje
 
 # 2. Obtendo a transcrição
 
-Use o editor de sua preferência (vscode, notepad, vim... ) para criar o seguinte programa:
+O programa **get_transcript.py** faz a transcrição de um vídeo. 
 
-**get_transcript.py**
+	#biblioteca para lidar com a API da Youtube
+	from youtube_transcript_api import YouTubeTranscriptApi                
+	idioma = ['pt','en']
+	
+	# Obtem a URL do vídeo
+	video_url = input ("Qual a url do video que deseja transcrever?\n")     
+	
+	# Obtem o id a partir da URL
+	video_id = video_url.split("v=")[-1]                                    
+	
+	try:
+		transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=idioma)    
+		transcript_text = " ".join([entry['text'] for entry in transcript])            
+		print(transcript_text)
+	
+	except Exception as e:
+		print(f"Erro ao obter a transcrição na função get_transcript: {e}")
 
-from youtube_transcript_api import YouTubeTranscriptApi                # biblioteca para lidar com a API da Youtube
-idioma = ['pt','en']
-
-video_url = input ("Qual a url do video que deseja transcrever?\n")     # Obtem a URL do vídeo
-video_id = video_url.split("v=")[-1]                                    # Obtem o id a partir da URL
-
-try:
-	transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=idioma)    
-	transcript_text = " ".join([entry['text'] for entry in transcript])            
-	print(transcript_text)
-
-except Exception as e:
-	print(f"Erro ao obter a transcrição na função get_transcript: {e}")
