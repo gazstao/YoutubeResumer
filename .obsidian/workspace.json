@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "2de123ef0a5bada3",
@@ -146,6 +147,8 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0e5428f21fcfd435",
-  "lastOpenFiles": []
+  "active": "39ccfca2f01460d7",
+  "lastOpenFiles": [
+    "resuma.py"
+  ]
 }
