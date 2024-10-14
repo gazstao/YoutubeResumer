@@ -1,4 +1,5 @@
 # YoutubeResumer
+
 ![OIG1](https://github.com/user-attachments/assets/c4eab0b7-4504-4782-991b-81a2601fd0f7)
 
 
@@ -17,19 +18,16 @@ Objetivos:
 tudo isso de maneira automatizada e rodando suave.
 
 
------------------------
-
-
 # 1. Instalando os programas
 
 
 Os requisitos para que o programa funcione são:
 
-- Instalação do Python e das bibliotecas (uma para transcrição do vídeo e uma para a IA)
+- Instalação do Python e das bibliotecas (uma para transcrição do vídeo e uma para o ollama)
 - Instalação do Ollama
 
 
-### 1.1 - Instalando o ollama
+## 1.1 - Instalando o ollama
 
 
 Caso ainda não tenha o ollama instalado, faça-o agora mesmo! Quem sabe algum dia sem internet você quer conversar com uma IA, ou no caso de algum evento imprevisto (apocalipse zumbi), ou para manter sua privacidade, ou para realizar testes... Eu realmente recomendo ter o ollama, é simples de instalar e muito poderoso. 
@@ -102,7 +100,7 @@ O modelo de 12b desenvolvido pela Nvidia, com 128k de contexto (pode lidar com u
 
 
 
-### 1.2 - Python
+## 1.2 - Python
 
 
 **Windows:** 
@@ -120,7 +118,7 @@ O modelo de 12b desenvolvido pela Nvidia, com 128k de contexto (pode lidar com u
 
 
 
-### 1.3 - Instalando as dependências necessárias
+## 1.3 - Instalando as dependências necessárias
 
 
 
@@ -129,12 +127,11 @@ Utilize o comando abaixo para instalar as dependências necessárias desse proje
 	pip install  youtube_transcript_api ollama
 
 
-------------------------------------------
 
 # 2. Funcionalidades
 
 
-### 2.1 Obtendo a transcrição
+## 2.1 Obtendo a transcrição
 
 
 O programa [**get_transcript.py**](https://github.com/gazstao/YoutubeResumer/blob/main/get_transcript.py) faz a transcrição de um vídeo. 
@@ -142,18 +139,20 @@ O programa [**get_transcript.py**](https://github.com/gazstao/YoutubeResumer/blo
 	python3 get_transcript.py
 
 
-### 2.2 Solicitando o resumo
+## 2.2 Solicitando o resumo
 
 O programa [**resuma.py**](https://github.com/gazstao/YoutubeResumer/blob/main/resuma.py)faz a transcrição seguida de um resumo do vídeo.
 
 	python3 resuma.py
 
 
------------------------
 
 # 3. Versão Final
 
 A versão final [**youtubeResumer.py**](https://github.com/gazstao/YoutubeResumer/blob/main/youtubeResumer.py) possui algumas funcionalidades adicionais, que são gravar a transcrição em um arquivo de texto e criar um arquivo html com cada resumo. Para gravas esses arquivos, deve existir uma pasta chamada "data" em seu diretório.
+
+![image](https://github.com/user-attachments/assets/c840298a-a41c-435e-8283-d1dcd9d75e2a)
+
 
 -  Irá obter a transcrição e gravá-la em um arquivo de texto na pasta ./data
 -  Irá criar um arquivo html para cada resposta com o resumo na pasta ./data
