@@ -99,11 +99,7 @@ O modelo de 12b desenvolvido pela Nvidia, com 128k de contexto (pode lidar com u
 
 	ollama ps
 
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/a0b01cc6-c71c-473f-ada9-d8163b369efc)
 
 
 
