@@ -1,25 +1,23 @@
 # YoutubeResumer
+![OIG1](https://github.com/user-attachments/assets/c4eab0b7-4504-4782-991b-81a2601fd0f7)
 
 
 Você já quis resumir vídeos longos do YouTube em poucos minutos, extraindo apenas as informações mais importantes para saber se vale à pena assistir? 
 
-Neste tutorial vamos criar  um resumidor de vídeos do YouTube usando **Python** e **inteligência artificial** local (ollama). 
+Pra isso eu pensei no "Resumidor de Vídeos do Youtube". Mas como queria um nome mais chique e criativo🙄, ficou YoutubeResumer =)
+Neste tutorial vamos criar  um resumidor de vídeos do YouTube usando **Python** e **inteligência artificial** local com o ollama. 
 
-Descubra como extrair a transcrição de um vídeo, processar a linguagem natural com técnicas de IA e gerar resumos concisos, tudo isso de maneira automatizada.
+Objetivos:
+
+- Descobrir como extrair a transcrição de um vídeo,
+- processar a linguagem natural com técnicas de IA e
+- gerar resumos concisos,
+
+tudo isso de maneira automatizada e rodando suave.
+
 
 -----------------------
 
-
-## O que você vai aprender?
-
-Ao longo deste tutorial, vamos explorar:
-
-1. **Como baixar as legendas de vídeos do YouTube**: Utilizando APIs e ferramentas Python para capturar as legendas de maneira simples e eficiente.
-2. **Processamento de linguagem natural (NLP)**: Usando bibliotecas de IA para analisar e entender as legendas e identificar as informações mais relevantes.
-3. **Gerar resumos inteligentes**: Criar um algoritmo que compila as ideias principais do vídeo em uma versão curta e objetiva.
-4. **Dicas e truques para melhorar a precisão** do resumo e customizar os resultados para atender às suas necessidades.
-
--------------------------
 
 # 1. Instalando os programas
 
