@@ -10,7 +10,7 @@ import os           # biblioteca para lidar com arquivos
 # Caso queira somente uma resposta, deixe somente um modelo, caso queira mais respostas, adicione os modelos desejados.
 # Esses modelos já devem estar instalados no ollama, e devem constar com o mesmo nome 
 
-modelos = ["llama3.1:latest","nous-hermes2:latest","gemma2:latest"]
+modelos = ["llama3.1:latest","gemma2:latest"]
 
 # o prompt é capaz de mudar completamente o estilo e a resposta, então vamos explicar direito pra IA O que é pra ela fazer. 
 prompt = "Você está assistindo a um vídeo no youtube. Respire fundo, e faça um esquema organizado e detalhado do seguinte texto, pontuando os itens principais e descrevendo o mais detalhadamente possivel seu conteudo: "

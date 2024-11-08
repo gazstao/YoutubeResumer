@@ -10,6 +10,11 @@ try:
     transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=idioma)    # Obtem a transcrição, primeiro tenta em portugues, depois em ingles.
     transcript_text = " ".join([entry['text'] for entry in transcript])             
     print(transcript_text)
+    gravar = input("Deseja gravar? (s/n)").lower()
+    if gravar[0]=='s':
+        with open("data/"+video_id+".txt","w") as arquivo:
+            arquivo.write(transcript_text)
+        print("gravado com sucesso...")
 
 except Exception as e:
     print(f"Erro ao obter a transcrição na função get_transcript: {e}")
