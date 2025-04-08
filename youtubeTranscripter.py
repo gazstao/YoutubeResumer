@@ -10,10 +10,10 @@ import os           # biblioteca para lidar com arquivos
 # Caso queira somente uma resposta, deixe somente um modelo, caso queira mais respostas, adicione os modelos desejados.
 # Esses modelos já devem estar instalados no ollama, e devem constar com o mesmo nome 
 
-modelos = ["deepseek-r1:14b"]
+modelos = ["llama3.2:latest"]
 
 # o prompt é capaz de mudar completamente o estilo e a resposta, então vamos explicar direito pra IA O que é pra ela fazer. 
-prompt = "Você está assistindo a um vídeo no youtube. Respire fundo, e faça um esquema organizado e detalhado do seguinte texto, pontuando os itens principais e descrevendo o mais detalhadamente possivel seu conteudo: "
+prompt_system = "Você é um corretor que vai pontuar corretamente o seguinte texto, colocando toda a pontuação necessária para que tenha sentido e colocando a próxima frase em uma nova linha, sem alterar o conteudo do que está escrito."
 
 # E vamos escolher quais idiomas nos interessam, de acordo com 
 idioma = ['pt','en']
@@ -36,13 +36,16 @@ def get_transcript(video_id):
 
 
 # Obtem um texto e um ID de arquivo para gravar o resultado, e cria um resumo usando o Ollama
-def summarize_with_ollama(text, modelo): 
+def summarize_with_ollama(prompt_text, modelo): 
     try:
-        saida = ollama.chat(model=modelo, messages=[{'role':'user','content': prompt+text}])
-        return(saida)
+        saida = ollama.chat(model=modelo, messages=[{'role':'system','content': prompt_system},
+                                                     {"role": "user", "content": prompt_text}])
+        json_bonito_saida = json.dumps(saida,indent=4)
+        print(json_bonito_saida)
+        return(saida['message']['content'])
 
     except Exception as e:
-        print(f"APP ERROR! {e}")
+        print(f"Erro: {e}")
         return None
 
 
@@ -62,7 +65,7 @@ def main():
         for modelo in modelos:
             # Enviar a transcrição para o Ollama e obter o resumo
             summary = summarize_with_ollama(texto_transcricao, modelo)
-            print("Resumo: "+summary['message']['content'])
+            print("Resumo: "+summary)
 
             # Criar um arquivo HTML com o resumo
             if summary:
@@ -87,7 +90,7 @@ def criaHtml(modelo, texto, video_id, url):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>YouTube Resumer</title>
+        <title>YouTube Transcripter</title>
         <style>
             body {{
                 font-family: Arial, sans-serif;
@@ -111,7 +114,7 @@ def criaHtml(modelo, texto, video_id, url):
         </style>
     </head>
     <body>
-        <h1>YouTube Resumer - {modelo}</h1>
+        <h1>YouTube Transcripter - {modelo}</h1>
         <p><a href="{url}">{url}</a></p>
         <pre>{texto}</pre>
     </body>
