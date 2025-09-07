@@ -1,20 +1,26 @@
-from youtube_transcript_api import YouTubeTranscriptApi                # biblioteca para lidar com a API da Youtube
+from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFound
 
-idioma = ['pt','en']
-
-video_url = input ("Qual a url do video que deseja transcrever?\n")     # Obtem a URL do vídeo
-video_id = video_url.split("v=")[-1]                                    # Obtem o id a partir da URL
-
-# So vai funcionar em videos que tem legenda e permitam a transcricao
-try:
-    transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=idioma)    # Obtem a transcrição, primeiro tenta em portugues, depois em ingles.
-    transcript_text = " ".join([entry['text'] for entry in transcript])             
-    print(transcript_text)
-    gravar = input("Deseja gravar? (s/n)").lower()
-    if gravar[0]=='s':
-        with open("data/"+video_id+".txt","w") as arquivo:
-            arquivo.write(transcript_text)
-        print("gravado com sucesso...")
-
-except Exception as e:
-    print(f"Erro ao obter a transcrição na função get_transcript: {e}")
+def get_transcript(video_id):
+    try:
+        # Instancie a API
+        ytt_api = YouTubeTranscriptApi()
+        
+        # Fetch da transcrição (use languages=['pt'] para português, se quiser)
+        transcript_list = ytt_api.fetch(video_id)  # Tente PT primeiro, fallback para EN
+        
+        # Junte todos os textos em uma string única
+        transcript_text = ' '.join([entry['text'] for entry in transcript_list])
+        
+        return transcript_text  # Retorna a string da transcrição
+    
+    except (TranscriptsDisabled, NoTranscriptFound):
+        print("Erro: Transcrição não disponível para este vídeo.")
+        return None
+    except Exception as e:
+        print(f"Erro inesperado ao obter transcrição: {e}")
+        return None
+    
+video_id = input ("Link do vídeo para obter transcrição: ")
+video_id = video_id.split("v=")[-1]   
+get_transcript(video_id)
