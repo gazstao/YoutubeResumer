@@ -2,18 +2,20 @@
 
 ![OIG1](https://github.com/user-attachments/assets/c4eab0b7-4504-4782-991b-81a2601fd0f7)
 
+Obtém transcrição de vídeos do Youtube. 
+Resume vídeos em poucos minutos, extraindo apenas as informações mais importantes.
 
-Você já quis resumir vídeos longos do YouTube em poucos minutos, extraindo apenas as informações mais importantes para saber se vale à pena assistir? 
+Vale à pena assistir? 
 
-Pra isso eu pensei no "Resumidor de Vídeos do Youtube". Mas como queria um nome mais chique e criativo🙄, ficou YoutubeResumer =)
+"Resumidor de Vídeos do Youtube", ou YoutubeResumer =)
 
-Neste tutorial vamos criar  um resumidor de vídeos do YouTube usando **Python** e **inteligência artificial** local com o ollama. 
+Um resumidor de vídeos do YouTube usando **Python** e **inteligência artificial** local com o ollama. 
 
 Objetivos:
 
-- Descobrir como extrair a transcrição de um vídeo,
-- processar a linguagem natural com técnicas de IA e
-- gerar resumos concisos,
+- Extrair a transcrição de um vídeo,
+- Processar a linguagem natural com técnicas de IA e
+- Gerar resumos concisos,
 
 tudo isso de maneira automatizada e rodando suave.
 
@@ -30,12 +32,17 @@ Os requisitos para que o programa funcione são:
 ## 1.1 - Instalando o ollama
 
 
-Caso ainda não tenha o ollama instalado, faça-o agora mesmo! Quem sabe algum dia sem internet você quer conversar com uma IA, ou no caso de algum evento imprevisto (apocalipse zumbi), ou para manter sua privacidade, ou para realizar testes... Eu realmente recomendo ter o ollama, é simples de instalar e muito poderoso. 
+Caso ainda não tenha o ollama instalado, faça-o agora mesmo! 
+Quem sabe algum dia sem internet você quer conversar com uma IA, ou no caso de algum evento imprevisto (apocalipse zumbi), 
+ou para manter sua privacidade, 
+ou para realizar testes... 
+
+Eu realmente recomendo ter o ollama, é simples de instalar e muito poderoso. 
 
 - Para rodar o Ollama, vá até o site www.ollama.com, escolha sua plataforma e instale o programa.
 - Em seguida, abra o shell (terminal) ou prompt de comando e digite:
 
-	ollama run llama3.2
+	ollama run gpt-oss (ou escolha o modelo de sua preferência)
 
 caso tudo tenha dado certo, você já está o modelo instalado localmente. 
 
@@ -141,7 +148,7 @@ O programa [**get_transcript.py**](https://github.com/gazstao/YoutubeResumer/blo
 
 ## 2.2 Solicitando o resumo
 
-O programa [**resuma.py**](https://github.com/gazstao/YoutubeResumer/blob/main/resuma.py) faz a transcrição seguida de um resumo do vídeo.
+O programa [**youtuberesumer.py**](https://github.com/gazstao/YoutubeResumer/blob/main/youtuberesumer.py) faz a transcrição seguida de um resumo do vídeo.
 
 	python3 resuma.py
 
